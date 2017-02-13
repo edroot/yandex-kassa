@@ -10,7 +10,7 @@ setup(
     description='empty',
     url='https://github.com/k0st1an/yandex-kassa',
     packages=find_packages(),
-    py_modules=['yandex_kassa'],
+    # py_modules=['yandex_kassa'],
     license='Apache License Version 2.0',
     classifiers=[
         'Development Status :: 3 - Alpha',

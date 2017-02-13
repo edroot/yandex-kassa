@@ -128,7 +128,7 @@ class BaseYandexKassa:
         """Метод проверки события, нужна реализация в дочерних классах."""
         raise NotImplementedError()
 
-    def _get_responce(self, **kwargs):
+    def _get_response(self, **kwargs):
         attrs = {
             'performedDatetime': datetime.now().isoformat(),
             'code': kwargs.get('code'),
@@ -151,9 +151,9 @@ class BaseYandexKassa:
 
         return ET.tostring(res_xml)
 
-    def get_responce(self, code, message=None, tech_message=None):
+    def get_response(self, code, message=None, tech_message=None):
         """Получение ответа для яндекса."""
-        return self._get_responce(
+        return self._get_response(
             **{'code': code, 'message': message, 'techMessage': tech_message})
 
 
