@@ -61,7 +61,7 @@ class BaseYandexKassa:
             except KeyError:
                 continue
 
-        self.logger.info('clean data: %s', self.cleaning_data)
+        self.logger.info('clean data: %s', cleaning_data)
 
         return cleaning_data
 
