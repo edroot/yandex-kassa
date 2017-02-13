@@ -131,9 +131,9 @@ class BaseYandexKassa:
     def _get_response(self, **kwargs):
         attrs = {
             'performedDatetime': datetime.now().isoformat(),
-            'code': kwargs.get('code'),
-            'invoiceId': self.cleaning_data.get('invoiceId'),
-            'shopId': self.shop_id
+            'code': str(kwargs.get('code')),
+            'invoiceId': str(self.cleaning_data.get('invoiceId')),
+            'shopId': str(self.shop_id)
         }
 
         if kwargs.get('message'):
